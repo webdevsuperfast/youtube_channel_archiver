@@ -4,8 +4,9 @@ This is a forked version of [YouTube Channel Archiver](https://github.com/dmn001
 
 ## Usage
 
-1. Create `youtube-dl-playlists.txt` file and add your playlist URLs.
-2. Save File.
-3. Run `./download_archive.sh` if you're on MacOS/Linux/WSL, `./download_archive.bat` if you're on Windows on your favorite CLI program.
+1. Download or clone repository.
+2. Navigate to extracted or cloned repository, e.g. `cd ~/youtube-playlist-archiver`.
+2. Create `youtube-dl-playlists.txt` file and list or input playlist URLs, e.g. `echo 'https://www.youtube.com/playlist?list=PLvahqwMqN4M0UXgBYznO18lSYjzRj-gT-' >> youtube-dl-playlists.txt`.
+3. Run `./download_archive.sh` if you're on MacOS/Linux/WSL, `./download_archive.bat` if you're on Windows via CLI.
 
-**Note:** Empty file `youtube-dl-archive.txt` is used to store downloaded ids. For Linux/MacOS, you might need to fix the `download_archive.sh` permission first by `chmod +x download_archive.sh`.
+**Note:** Empty file `youtube-dl-archive.txt` is used to store downloaded YouTube ids. For Linux/MacOS, you might need to fix the `download_archive.sh` permission first by running `chmod +x download_archive.sh` via CLI.
