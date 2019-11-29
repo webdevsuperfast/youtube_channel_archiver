@@ -8,4 +8,4 @@ This is a forked version of [YouTube Channel Archiver](https://github.com/dmn001
 2. Save File.
 3. Run `./download_archive.sh` if you're on MacOS/Linux/WSL, `./download_archive.bat` if you're on Windows.
 
-Note: Empty file `youtube-dl-archive.txt` is used to store downloaded ids. For Linux/MacOS, you might need to fix the `download_archive.sh` permission first by `chmod +x download_archive.sh`.
+**Note:** Empty file `youtube-dl-archive.txt` is used to store downloaded ids. For Linux/MacOS, you might need to fix the `download_archive.sh` permission first by `chmod +x download_archive.sh`.
