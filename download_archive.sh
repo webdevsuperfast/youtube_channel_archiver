@@ -1,2 +1,4 @@
 #!/bin/sh
-youtube-dl --config-location youtube-dl.conf
+echo Enter video URL
+read videourl
+youtube-dl $videourl --config-location youtube-dl.conf
