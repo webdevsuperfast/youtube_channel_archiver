@@ -3,3 +3,9 @@
 youtube-dl-archive.txt
 youtube-dl-channels.txt
 youtube-dl-playlists.txt
+*.mkv
+*.mp4
+*.description
+*.srt
+*.jpg
+*.png
