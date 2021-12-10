@@ -16,4 +16,37 @@ else
 fi
 
 # Execute command
-yt-dlp --config-location youtube-dl.conf
+# yt-dlp --config-location youtube-dl.conf
+
+echo Choose an option:
+
+formats=("video" "audio" "playlist" "audio-playlist")
+echo $PS3
+select format in "${formats[@]}"; do
+  case $format in
+    "video")
+      echo "Downloading video"
+      yt-dlp --config-location video.conf
+      exit 1
+      ;;
+    "audio")
+      echo "Downloading audio"
+      yt-dlp --config-location audio.conf
+      exit 1
+      ;;
+    "playlist")
+      echo "Downloading video playlist"
+      yt-dlp --config-location playlist.conf
+      exit 1
+      ;;
+    "audio-playlist")
+      echo "Downloading audio playlist"
+      yt-dlp --config-location audio-playlist.conf
+      exit 1
+      ;;
+    *)
+      echo "Invalid option"
+      exit 1
+      ;;  
+  esac
+done
