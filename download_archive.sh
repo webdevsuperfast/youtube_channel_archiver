@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # Create a file if youtube-dl-playlists.txt doesnt exist
 if [ ! -f youtube-dl-playlists.txt ]; then
   touch youtube-dl-playlists.txt
@@ -18,10 +18,13 @@ fi
 # Execute command
 # yt-dlp --config-location youtube-dl.conf
 
-echo Choose an option:
-
+prompt="Choose an option:"
 formats=("video" "audio" "playlist" "audio-playlist")
-echo $PS3
+
+PS3="$prompt "
+
+# formats=($formats)
+
 select format in "${formats[@]}"; do
   case $format in
     "video")
