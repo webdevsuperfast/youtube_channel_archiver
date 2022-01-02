@@ -5,7 +5,7 @@ if [ ! -f youtube-dl-playlists.txt ]; then
 fi
 
 # Get input from user
-echo Enter video URL
+echo Enter URL
 read videourl
 
 # Check if videourl is already in the file
@@ -39,7 +39,7 @@ select format in "${formats[@]}"; do
       ;;
     "playlist")
       echo "Downloading video playlist"
-      yt-dlp --config-location playlist.conf
+      yt-dlp --config-location video-playlist.conf
       exit 1
       ;;
     "audio-playlist")
