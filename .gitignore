@@ -1,4 +1,5 @@
 */*
+!config/*
 .DS_Store
 youtube-dl-archive.txt
 youtube-dl-channels.txt
