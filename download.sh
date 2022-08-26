@@ -7,28 +7,8 @@ if [ ! -f youtube-dl-playlists.txt ]; then
 fi
 
 # Get input from user
-prompt="Choose what to do: "
-PS3="$prompt "
-
-options=("url" "continue")
-select option in "${options[@]}"; do
-  case $option in 
-    "url")
-      echo "Enter URL"
-      read videourl
-      break 1
-      ;;
-    "continue")
-      echo "Continue downloading"
-      videourl=$(tail -n 1 youtube-dl-playlists.txt)
-      break 1
-      ;;
-    *)
-      echo "No options selected."
-      continue 1
-      ;;
-  esac
-done
+echo Enter URL
+read videourl
 
 # Check if videourl is already in the file
 if grep -R "$videourl" youtube-dl-playlists.txt; then
@@ -38,12 +18,15 @@ else
 fi
 
 # Execute command
+# yt-dlp --config-location youtube-dl.conf
+
 prompt="Choose an option:"
 formats=("video" "audio" "playlist" "audio-playlist")
 
 PS3="$prompt "
 
-# Select format
+# formats=($formats)
+
 select format in "${formats[@]}"; do
   case $format in
     "video")
@@ -68,7 +51,7 @@ select format in "${formats[@]}"; do
       ;;
     *)
       echo "Invalid option"
-      continue 1
+      exit 1
       ;;  
   esac
 done
